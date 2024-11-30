@@ -1,1 +1,24 @@
+on:
+  push:
+    branches:
+      - master
 
+
+
+
+
+
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "print files before"
+        run: ls
+
+      - uses: actions/checkout@v3
+
+      - name: "print files after"
+        run: ls
